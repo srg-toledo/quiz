@@ -1,0 +1,37 @@
+@component('pages/components/layout', {title: 'Ordem Crescente'})
+
+
+<div class="container-fluid d-flex justify-content-center align-items-center p-4">
+  <div class="card col-md-10 col-xxl-4">
+      <div class="card-header-white bg-dark text-white p-3">
+        <h1 class="text-center">Ordenação de Valores</h1>
+      </div>
+      <div class="card-body">
+        <form id="formValores">
+          <div class="form-group">
+            <label for="valor1">Valor 1:</label>
+            <input type="number" class="form-control" id="valor1" required>
+          </div>
+          <div class="form-group">
+            <label for="valor2">Valor 2:</label>
+            <input type="number" class="form-control" id="valor2" required>
+          </div>
+          <div class="form-group">
+            <label for="valor3">Valor 3:</label>
+            <input type="number" class="form-control" id="valor3" required>
+          </div>
+          <div class="form-group">
+            <label for="valor4">Valor 4:</label>
+            <input type="number" class="form-control" id="valor4" required>
+          </div>
+          <div class="form-group">
+            <label for="valor5">Valor 5:</label>
+            <input type="number" class="form-control" id="valor5" required>
+          </div>
+          <button type="submit" id="ordenar" class="btn btn-primary btn-block mt-4">Ordenar</button>
+        </form>
+        <div id="ordem" class="mt-4 text-center alert alert-success" style="display: none;"></div>
+      </div>
+    </div>
+</div>
+@end

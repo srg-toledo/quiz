@@ -1,0 +1,126 @@
+@component('pages/components/layout', {title: 'Quiz - JavaScript'})
+
+<style>
+    .form-check .form-check-input {
+    float: left;
+    margin-left: 0.5em;
+    margin-right: 0.5em;  
+}
+</style>
+
+<div class="container-fluid d-flex justify-content-center align-items-center p-4">
+    <div class="card col-sm-8 col-md-12 col-xxl-6">
+        <div class="card-header-white bg-dark text-white">
+          <h1 class="text-center">Quiz: Js</h1>
+        </div>
+        <div class="card-body">
+          <form id="quizFormJs">
+            <div class="form-group border rounded-2 p-2 mb-4 col-md-12">
+              <label for="pergunta1" class="p-2">01 - Qual é a capital do Brasil?</label>
+              <div class="form-check border rounded-2 p-2 mb-2" id="1a">
+                <input class="form-check-input" type="radio" name="pergunta1" id="alternativa1A" value="a" required>
+                <label class="form-check-label" for="alternativa1A">
+                  a - Brasília
+                </label>
+              </div>
+              <div class="form-check border rounded-2 p-2 mb-2" id="1b">
+                <input class="form-check-input" type="radio" name="pergunta1" id="alternativa1B" value="b">
+                <label class="form-check-label" for="alternativa1B">
+                  b - Rio de Janeiro
+                </label>
+              </div>
+              <div class="form-check border rounded-2 p-2 mb-2" id="1c">
+                <input class="form-check-input" type="radio" name="pergunta1" id="alternativa1C" value="c">
+                <label class="form-check-label" for="alternativa1C">
+                  c - São Paulo
+                </label>
+              </div>
+              <div class="form-check border rounded-2 p-2 mb-2" id="1d">
+                <input class="form-check-input" type="radio" name="pergunta1" id="alternativa1D" value="d">
+                <label class="form-check-label" for="alternativa1D">
+                  d - São Paulo
+                </label>
+              </div>
+              <div class="form-check border rounded-2 p-2 mb-2" id="1e">
+                <input class="form-check-input" type="radio" name="pergunta1" id="alternativa1E" value="e">
+                <label class="form-check-label" for="alternativa1E">
+                  e - São Paulo
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group border rounded-2 p-2 mb-4">
+                <label for="pergunta1" class="p-2">02 - Qual é a capital do Brasil?</label>
+                <div class="form-check border rounded-2 p-2 mb-2" id="2a">
+                  <input class="form-check-input" type="radio" name="pergunta2" id="alternativa2A" value="a" required>
+                  <label class="form-check-label" for="alternativa2A">
+                    a - Brasília
+                  </label>
+                </div>
+                <div class="form-check border rounded-2 p-2 mb-2" id="2b">
+                  <input class="form-check-input" type="radio" name="pergunta2" id="alternativa2B" value="b">
+                  <label class="form-check-label" for="alternativa2B">
+                    b - Rio de Janeiro
+                  </label>
+                </div>
+                <div class="form-check border rounded-2 p-2 mb-2" id="2c">
+                  <input class="form-check-input" type="radio" name="pergunta2" id="alternativa2C" value="c">
+                  <label class="form-check-label" for="alternativa2C">
+                    c - São Paulo
+                  </label>
+                </div>
+                <div class="form-check border rounded-2 p-2 mb-2" id="2d">
+                  <input class="form-check-input" type="radio" name="pergunta2" id="alternativa2D" value="d">
+                  <label class="form-check-label" for="alternativa2D">
+                    d - São Paulo
+                  </label>
+                </div>
+                <div class="form-check border rounded-2 p-2 mb-2" id="2e">
+                  <input class="form-check-input" type="radio" name="pergunta2" id="alternativa2E" value="e">
+                  <label class="form-check-label" for="alternativa2E">
+                    e - São Paulo
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-group border rounded-2 p-2 mb-4">
+                <label for="pergunta1" class="p-2">03 - Qual é a capital do Brasil?</label>
+                <div class="form-check border rounded-2 p-2 mb-2" id="3a">
+                  <input class="form-check-input" type="radio" name="pergunta3" id="alternativa3A" value="a" required>
+                  <label class="form-check-label" for="alternativa3A">
+                    a - Brasília
+                  </label>
+                </div>
+                <div class="form-check border rounded-2 p-2 mb-2" id="3b">
+                  <input class="form-check-input" type="radio" name="pergunta3" id="alternativa3B" value="b">
+                  <label class="form-check-label" for="alternativa3B">
+                    b - Rio de Janeiro
+                  </label>
+                </div>
+                <div class="form-check border rounded-2 p-2 mb-2" id="3c">
+                  <input class="form-check-input" type="radio" name="pergunta3" id="alternativa3C" value="c">
+                  <label class="form-check-label" for="alternativa3C">
+                    c - São Paulo
+                  </label>
+                </div>
+                <div class="form-check border rounded-2 p-2 mb-2" id="3d">
+                  <input class="form-check-input" type="radio" name="pergunta3" id="alternativa3D" value="d">
+                  <label class="form-check-label" for="alternativa3D">
+                    d - São Paulo
+                  </label>
+                </div>
+                <div class="form-check border rounded-2 p-2 mb-2" id="3e">
+                  <input class="form-check-input" type="radio" name="pergunta3" id="alternativa3E" value="e">
+                  <label class="form-check-label" for="alternativa3E">
+                    e - São Paulo
+                  </label>
+                </div>
+              </div>
+            <button type="submit" class="btn btn-primary btn-block">Enviar Respostas</button>
+            <div id="resultado" class="mt-4 text-center" style="display: none;"></div>
+          </form>
+        </div>
+      </div>
+  </div>
+
+@end

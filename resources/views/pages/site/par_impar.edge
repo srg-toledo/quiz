@@ -1,0 +1,21 @@
+@component('pages/components/layout', {title: 'Pár ou Ímpar'})
+
+<div class="container-fluid d-flex justify-content-center align-items-center p-4">
+  <div class="card col-md-10 col-xxl-4">
+      <div class="card-header-white bg-dark text-white p-3">
+        <h1 class="text-center">Pár ou Ímpar</h1>
+      </div>
+      <div class="card-body">
+        <form id="formParImpar">
+          <div class="form-group">
+            <label for="valor1">Número:</label>
+            <input type="number" class="form-control" id="valor" required>
+          </div>
+          
+          <button type="submit" class="btn btn-primary btn-block mt-4">Verificar</button>
+        </form>
+        <div id="imparPar" class="mt-4 text-center alert alert-success" style="display: none;"></div>
+      </div>
+    </div>
+</div>
+@end

@@ -1,0 +1,130 @@
+@component('pages/components/layout', { title:  'Quiz - Programação Orientada a Objetos'})
+
+<style>
+    .form-check .form-check-input {
+    float: left;
+    margin-left: 0.5em;
+    margin-right: 0.5em;  
+}
+
+</style>
+<div class="container-fluid d-flex justify-content-center align-items-center p-4">
+    <div class="card col-md-12 col-xxl-6">
+        <div class="card-header-white bg-dark text-white">
+          <h1 class="text-center">Quiz: Programação Orientada a Objetos</h1>
+        </div>
+        <div class="card-body">
+          <form id="quizFormPoo">
+            <div class="form-group border rounded-2 p-2 mb-4">
+              <label for="pergunta1" class="p-2">01 - O que é a estrutura if-else?
+
+              </label>
+              <div class="form-check border rounded-2 p-2 mb-2" id="1a">
+                <input class="form-check-input" type="radio" name="pergunta1" id="alternativa1A" value="a" required>
+                <label class="form-check-label" for="alternativa1A">
+                  a - Uma estrutura que permite a execução condicional de instruções.
+                </label>
+              </div>
+              <div class="form-check border rounded-2 p-2 mb-2" id="1b">
+                <input class="form-check-input" type="radio" name="pergunta1" id="alternativa1B" value="b">
+                <label class="form-check-label" for="alternativa1B">
+                  b - Uma estrutura que permite a execução incondicional de instruções.
+                </label>
+              </div>
+              <div class="form-check border rounded-2 p-2 mb-2" id="1c">
+                <input class="form-check-input" type="radio" name="pergunta1" id="alternativa1C" value="c">
+                <label class="form-check-label" for="alternativa1C">
+                  c - Uma estrutura que permite a execução de instruções em loop.
+                </label>
+              </div>
+              <div class="form-check border rounded-2 p-2 mb-2" id="1d">
+                <input class="form-check-input" type="radio" name="pergunta1" id="alternativa1D" value="d">
+                <label class="form-check-label" for="alternativa1D">
+                  d - Uma estrutura que permite a execução de instruções em paralelo.
+                </label>
+              </div>
+              <div class="form-check border rounded-2 p-2 mb-2" id="1e">
+                <input class="form-check-input" type="radio" name="pergunta1" id="alternativa1E" value="e">
+                <label class="form-check-label" for="alternativa1E">
+                  e - Nenhuma das alternativas anteriores.
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group border rounded-2 p-2 mb-4">
+              <label for="pergunta2" class="p-2">02 - O que são atributos de uma classe?
+              </label>
+              <div class="form-check border rounded-2 p-2 mb-2" id="2a">
+                <input class="form-check-input" type="radio" name="pergunta2" id="alternativa2A" value="a">
+                <label class="form-check-label" for="alternativa2A">
+                  a - As estruturas de decisão que definem o comportamento de um objeto.
+                </label>
+              </div>
+
+              <div class="form-check border rounded-2 p-2 mb-2" id="2b">
+                <input class="form-check-input" type="radio" name="pergunta2" id="alternativa2B" value="b" required>
+                <label class="form-check-label" for="alternativa2B">
+                  b - As funções que definem o comportamento de um objeto.
+                </label>
+              </div>
+
+              <div class="form-check border rounded-2 p-2 mb-2" id="2c">
+                <input class="form-check-input" type="radio" name="pergunta2" id="alternativa2C" value="c">
+                <label class="form-check-label" for="alternativa2C">
+                  c - As propriedades que definem o estado de um objeto.
+                </label>
+              </div>
+              <div class="form-check border rounded-2 p-2 mb-2" id="2d">
+                <input class="form-check-input" type="radio" name="pergunta2" id="alternativa2C" value="d">
+                <label class="form-check-label" for="alternativa2D">
+                  d - As variáveis que definem o comportamento de um objeto.
+                </label>
+              </div>
+              <div class="form-check border rounded-2 p-2 mb-2" id="2e">
+                <input class="form-check-input" type="radio" name="pergunta2" id="alternativa2C" value="e">
+                <label class="form-check-label" for="alternativa2E">
+                  e - Nenhuma das alternativas anteriores.
+                </label>
+              </div>
+            </div>
+            <div class="form-group border rounded-2 p-2 mb-2" >
+                <label for="pergunta3" class="p-2">03 - O que é um método que recebe um objeto como parâmetro?</label>
+                <div class="form-check border rounded-2 p-2 mb-2" id="3a">
+                  <input class="form-check-input" type="radio" name="pergunta3" id="alternativa3A" value="a">
+                  <label class="form-check-label" for="alternativa3A">
+                    a - Um método que recebe uma variável do tipo objeto como parâmetro.
+                  </label>
+                </div>
+                <div class="form-check border rounded-2 p-2 mb-2" id="3b">
+                  <input class="form-check-input" type="radio" name="pergunta3" id="alternativa3B" value="b" required>
+                  <label class="form-check-label" for="alternativa3B">
+                    b - Um método que recebe uma função como parâmetro.
+                  </label>
+                </div>
+                <div class="form-check border rounded-2 p-2 mb-2" id="3c">
+                  <input class="form-check-input" type="radio" name="pergunta3" id="alternativa3C" value="c">
+                  <label class="form-check-label" for="alternativa3C">
+                    c - Um método que recebe uma estrutura de decisão como parâmetro.
+                  </label>
+                </div>
+                <div class="form-check border rounded-2 p-2 mb-2" id="3d">
+                  <input class="form-check-input" type="radio" name="pergunta3" id="alternativa3D" value="d">
+                  <label class="form-check-label" for="alternativa3D">
+                    d - Um método que recebe uma variável do tipo primitivo como parâmetro.
+                  </label>
+                </div>
+                <div class="form-check border rounded-2 p-2 mb-2" id="3e">
+                  <input class="form-check-input" type="radio" name="pergunta3" id="alternativa3E" value="e">
+                  <label class="form-check-label" for="alternativa3E">
+                    e - Nenhuma das alternativas anteriores.
+                  </label>
+                </div>
+              </div>
+              <div id="resultado" class="alert alert-primary" role="alert" style="display: none;"></div>
+              <button type="submit" class="btn btn-primary btn-block">Enviar Respostas</button>
+              <button id="resetBtn" class="btn btn-secondary" style="display: none;">Tentar Novamente</button>
+          </form>
+        </div>
+      </div>
+  </div>
+@end

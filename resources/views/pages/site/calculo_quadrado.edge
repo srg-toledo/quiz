@@ -1,0 +1,28 @@
+@component('pages/components/layout', {title: 'Calculo Quadrado'})
+
+<div class="container-fluid d-flex justify-content-center align-items-center p-4">
+  <div class="card col-md-10 col-xxl-4">
+      <div class="card-header-white bg-dark text-white p-3">
+        <h1 class="text-center">Calculadora de Quadrados</h1>
+      </div>
+      <div class="card-body">
+        <form id="formQuadrados">
+          <div class="form-group">
+            <label for="valor1">Valor 1:</label>
+            <input type="number" class="form-control" id="valor_1" required>
+          </div>
+          <div class="form-group">
+            <label for="valor2">Valor 2:</label>
+            <input type="number" class="form-control" id="valor_2" required>
+          </div>
+          <div class="form-group">
+            <label for="valor3">Valor 3:</label>
+            <input type="number" class="form-control" id="valor_3" required>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block mt-4">Calcular Quadrados</button>
+        </form>
+        <div id="resultado" class="mt-4 text-center alert alert-success" style="display: none;"></div>
+      </div>
+    </div>
+</div>
+@end
