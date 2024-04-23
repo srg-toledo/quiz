@@ -17,7 +17,7 @@ export default defineConfig({
         'resources/js/sidebar.js',
         'resources/js/quiz.js',
         'resources/js/ordem.js',
-        'resources/js/calculoQquadrado.js',
+        'resources/js/calculoQuadrado.js',
         'resources/js/imparPar.js',
         'resources/js/media.js',
 

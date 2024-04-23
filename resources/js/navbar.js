@@ -44,18 +44,15 @@ $(document).ready(function() {
         } 
     }
 
-    // Manipulador de clique para o botão de navegação
     $('.btn-navbar').click(function(event) {
         event.stopPropagation();
         toggleMenu();
     });
 
-    // Manipulador de clique para o sidebar
     $('.sidebar').click(function(event) {
         event.stopPropagation();
     });
 
-    // Manipulador de clique para o body e tags <a>
     $('body, a').click(function(event) {
         if ($('.sidebar').css('left') == '0px' && $(window).width() < 768) {
             $('main').css({
@@ -66,12 +63,10 @@ $(document).ready(function() {
         }
     });
 
-    // Função para verificar a largura da janela ao carregar e redimensionar
     $(window).resize(function() {
         checkWindowWidth();
     });
 
-    // Manipulador de clique para as categorias do sidebar
     $('.category-container').click(function() {
         var target = $(this).data('target');
         var icon = $(this).find('.icon-dropDown');
@@ -90,6 +85,5 @@ $(document).ready(function() {
         }
     });
 
-    // Verifica a largura da janela ao carregar a página
     checkWindowWidth();
 });

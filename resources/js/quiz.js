@@ -19,25 +19,25 @@ $(document).ready(function () {
 
     $('.form-check').click(function(event) {
         
-        // Evitar que o clique propague para elementos pai
+        
         event.stopPropagation();
-        // Selecionar o input de rádio associado
+        
         var radioButton = $(this).find('input[type="radio"]');
-        // Verificar se o input de rádio não está marcado
+        
         if (!radioButton.prop('checked')) {
-            // Alternar o estado do input de rádio
+            
             radioButton.prop('checked', true);
         }
     });
 
     $('.form-check-label').click(function(event) {
-        // Evitar que o clique propague para elementos pai
+        
         event.stopPropagation();
-        // Selecionar o input de rádio associado
+        
         var radioButton = $(this).siblings('input[type="radio"]');
-        // Verificar se o input de rádio não está marcado
+        
         if (!radioButton.prop('checked')) {
-            // Alternar o estado do input de rádio
+            
             radioButton.prop('checked', true);
         }
     });
@@ -98,34 +98,28 @@ $(document).ready(function () {
         
         // var radioButton = $(this).find('input[type="radio"]');
         // radioButton.prop('disabled', true);
-
+        
         $('#resetBtn').css('display', 'block');
         // $('#resetBtn').click(function() {
-        //     // Remover classes de estilo dos elementos de resposta
-        //     $('.form-check').removeClass('bg-success text-white bg-danger');
-        
-        //     // Resetar resultados
-        //     $('#resultado').fadeOut().empty();
-        
-        //     // Exibir botão de envio novamente
+            //     $('.form-check').removeClass('bg-success text-white bg-danger');
             
-        // });
+            //     $('#resultado').fadeOut().empty();
+            
+            
+            // });
         // $('#resultado').text('Acertos: ' + acertos + ' Erros: ' + erros).show();
     });
-
+    
     $('#quizFormPoo').submit(function(event) {
         event.preventDefault();
-    
+        
         var erros = 0;
         var acertos = 0;
-    
+        
         var resposta1 = $('input[name="pergunta1"]:checked').val();
         var resposta2 = $('input[name="pergunta2"]:checked').val();
         var resposta3 = $('input[name="pergunta3"]:checked').val();
-    
-        console.log(resposta1);
-    
-       
+             
         if (resposta1 === 'a') {
             acertos ++;
             $('#1a').addClass('bg-success text-white');
@@ -134,7 +128,7 @@ $(document).ready(function () {
             $('#1' + resposta1).addClass('bg-danger text-white');
             $('#1a').addClass('bg-success text-white');
         }
-    
+        
         if (resposta2 === 'c') {
             acertos ++;
             $('#2c').addClass('bg-success text-white');
@@ -143,7 +137,7 @@ $(document).ready(function () {
             $('#2' + resposta2).addClass('bg-danger text-white');
             $('#2c').addClass('bg-success text-white');
         }
-    
+        
         if (resposta3 === 'a') {
             acertos ++;
             $('#3a').addClass('bg-success text-white');
@@ -152,34 +146,31 @@ $(document).ready(function () {
             $('#3' + resposta3).addClass('bg-danger text-white');
             $('#3a').addClass('bg-success text-white');
         }
-    
+        
         $('.btn').hide();
         $('#resultado').addClass('alert alert-primary').text('Acertos: ' + acertos + ' Erros: ' + erros).fadeIn();
         $('#resetBtn').css('display', 'block');
     });
-
+    
     $('#quizFormHTML').submit(function(event) {
         event.preventDefault();
-
+        
         var erros = 0;
         var acertos = 0;
-
+        
         var resposta1 = $('input[name="pergunta1"]:checked').val();
         var resposta2 = $('input[name="pergunta2"]:checked').val();
         var resposta3 = $('input[name="pergunta3"]:checked').val();
-
-        console.log(resposta1);
-
-    
-        if (resposta1 === 'd') {
+        
+        if (resposta1 === 'c') {
             acertos ++;
-            $('#1d').addClass('bg-success text-white');
+            $('#1c').addClass('bg-success text-white');
         } else {
             erros ++;
             $('#1' + resposta1).addClass('bg-danger text-white');
-            $('#1d').addClass('bg-success text-white');
+            $('#1c').addClass('bg-success text-white');
         }
-
+        
         if (resposta2 === 'a') {
             acertos ++;
             $('#2a').addClass('bg-success text-white');
@@ -188,31 +179,31 @@ $(document).ready(function () {
             $('#2' + resposta2).addClass('bg-danger text-white');
             $('#2a').addClass('bg-success text-white');
         }
-
-        if (resposta3 === 'c') {
+        
+        if (resposta3 === 'a') {
             acertos ++;
-            $('#3c').addClass('bg-success text-white');
+            $('#3a').addClass('bg-success text-white');
         } else {
             erros ++;
             $('#3' + resposta3).addClass('bg-danger text-white');
-            $('#3c').addClass('bg-success text-white');
+            $('#3a').addClass('bg-success text-white');
         }
-
-        $('#resultado').text('Acertos: ' + acertos + ' Erros: ' + erros).show();
+        
+        $('.btn').hide();
+        $('#resultado').addClass('alert alert-primary').text('Acertos: ' + acertos + ' Erros: ' + erros).fadeIn();
+        
+        $('#resetBtn').css('display', 'block');
     });
-
+    
     $('#quizFormCSS').submit(function(event) {
         event.preventDefault();
-
+        
         var erros = 0;
         var acertos = 0;
-
+        
         var resposta1 = $('input[name="pergunta1"]:checked').val();
         var resposta2 = $('input[name="pergunta2"]:checked').val();
         var resposta3 = $('input[name="pergunta3"]:checked').val();
-
-        console.log(resposta1);
-
     
         if (resposta1 === 'd') {
             acertos ++;
@@ -223,25 +214,28 @@ $(document).ready(function () {
             $('#1d').addClass('bg-success text-white');
         }
 
-        if (resposta2 === 'a') {
+        if (resposta2 === 'b') {
             acertos ++;
-            $('#2a').addClass('bg-success text-white');
+            $('#2b').addClass('bg-success text-white');
         } else {
             erros ++;
             $('#2' + resposta2).addClass('bg-danger text-white');
-            $('#2a').addClass('bg-success text-white');
+            $('#2b').addClass('bg-success text-white');
         }
 
-        if (resposta3 === 'c') {
+        if (resposta3 === 'd') {
             acertos ++;
-            $('#3c').addClass('bg-success text-white');
+            $('#3d').addClass('bg-success text-white');
         } else {
             erros ++;
             $('#3' + resposta3).addClass('bg-danger text-white');
-            $('#3c').addClass('bg-success text-white');
+            $('#3d').addClass('bg-success text-white');
         }
 
-        $('#resultado').text('Acertos: ' + acertos + ' Erros: ' + erros).show();
+        $('.btn').hide();
+        $('#resultado').addClass('alert alert-primary').text('Acertos: ' + acertos + ' Erros: ' + erros).fadeIn();
+        
+        $('#resetBtn').css('display', 'block');
     });
 
     $('#quizFormJs').submit(function(event) {
@@ -254,16 +248,13 @@ $(document).ready(function () {
         var resposta2 = $('input[name="pergunta2"]:checked').val();
         var resposta3 = $('input[name="pergunta3"]:checked').val();
 
-        console.log(resposta1);
-
-    
-        if (resposta1 === 'd') {
+        if (resposta1 === 'a') {
             acertos ++;
-            $('#1d').addClass('bg-success text-white');
+            $('#1a').addClass('bg-success text-white');
         } else {
             erros ++;
             $('#1' + resposta1).addClass('bg-danger text-white');
-            $('#1d').addClass('bg-success text-white');
+            $('#1a').addClass('bg-success text-white');
         }
 
         if (resposta2 === 'a') {
@@ -275,16 +266,19 @@ $(document).ready(function () {
             $('#2a').addClass('bg-success text-white');
         }
 
-        if (resposta3 === 'c') {
+        if (resposta3 === 'b') {
             acertos ++;
-            $('#3c').addClass('bg-success text-white');
+            $('#3b').addClass('bg-success text-white');
         } else {
             erros ++;
             $('#3' + resposta3).addClass('bg-danger text-white');
-            $('#3c').addClass('bg-success text-white');
+            $('#3b').addClass('bg-success text-white');
         }
 
-        $('#resultado').text('Acertos: ' + acertos + ' Erros: ' + erros).show();
+        $('.btn').hide();
+        $('#resultado').addClass('alert alert-primary').text('Acertos: ' + acertos + ' Erros: ' + erros).fadeIn();
+        
+        $('#resetBtn').css('display', 'block');
     });
     
 });
