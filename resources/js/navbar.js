@@ -7,6 +7,7 @@ $(document).ready(function() {
                 'pointer-events': 'auto' 
             });
         }
+        
     }
 
     function expandirMenu() {
@@ -36,6 +37,7 @@ $(document).ready(function() {
         if ($(window).width() < 768) {
             $('.ma_page_content').css('margin-left', '0');
             $('#text-logo').removeClass('fs-3').addClass('fs-6');
+            
             recolherMenu();
         } else {
             $('.ma_page_content').css('margin-left', '250px');
@@ -63,7 +65,8 @@ $(document).ready(function() {
         }
     });
 
-    $(window).resize(function() {
+    $(window).change(function() {
+        $(window).resize() 
         checkWindowWidth();
     });
 
